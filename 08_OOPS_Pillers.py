@@ -23,10 +23,8 @@ class Circle(Shape):
     def perimeter(self):
         return 2 * 3.14 * self.radius
 
-# Create an instance of the concrete class
 circle = Circle(radius=5)
 
-# Call the methods on the instance
 print("Area:", circle.area())  # Output: 78.5
 print("Perimeter:", circle.perimeter())  # Output: 31.4
 
@@ -34,7 +32,7 @@ print("Perimeter:", circle.perimeter())  # Output: 31.4
 
 
 
-# Python Inheritance
+# Python Inheritance (Single Inheritance)
 class Animal:
     def __init__(self, name):
         self.name = name
@@ -44,53 +42,187 @@ class Animal:
 
 class Dog(Animal):
     def speak(self):
-        print("Woof!")
+        print(f"{self.name}", "Woof!")
+
+animal = Animal("Pet")
+animal.speak()
 
 dog = Dog("Max")
 dog.speak()
 
 
 
-
-# Python Polymorphism 
-class Person:
+# Multilevel Inheritance
+class Animal:
     def __init__(self, name):
         self.name = name
 
-    def greet(self):
-        print("Hello, my name is", self.name)
+    def speak(self):
+        print(f"{self.name} says something")
 
-class Student(Person):
-    def greet(self):
-        print("Hello, I'm a student named", self.name)
 
-person1 = Person("Robert Downey")
-student1 = Student("Junior")
+class Dog(Animal):
+    def bark(self):
+        print(f"{self.name} barks")
 
-person1.greet()
-student1.greet()
+class GermanShepherd(Dog):
+    def guard(self):
+        print(f"{self.name} is guarding")
+
+my_dog = GermanShepherd("Rex")
+
+my_dog.speak()   # Calls speak method from Animal class
+my_dog.bark()    # Calls bark method from Dog class
+my_dog.guard()   # Calls guard method from GermanShepherd class
+
+
+
+
+
+# Multiple inheritance
+class Vehicle:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def display_info(self):
+        print(f"{self.brand} {self.model}")
+
+class Car(Vehicle):
+    def drive(self):
+        print("Car is driving")
+
+class Bus(Vehicle):
+    def transport_passengers(self):
+        print("Bus is transporting passengers")
+
+class CarAndBus(Car, Bus):
+    def honk(self):
+        print("Honk honk!")
+
+vehicle_instance = CarAndBus("Toyota", "Camry")
+
+
+vehicle_instance.display_info()            # Calls display_info method from Vehicle class
+vehicle_instance.drive()                   # Calls drive method from Car class
+vehicle_instance.transport_passengers()    # Calls transport_passengers method from Bus class
+vehicle_instance.honk()                    # Calls honk method from CarAndBus class
+
+
+
+
+
+
+# Hierarchical Inheritance
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} says something")
+
+class Dog(Animal):
+    def bark(self):
+        print(f"{self.name} barks")
+
+class Cat(Animal):
+    def meow(self):
+        print(f"{self.name} meows")
+
+
+my_dog = Dog("Buddy")
+my_cat = Cat("Whiskers")
+
+
+my_dog.speak()   # Calls speak method from Animal class
+my_dog.bark()    # Calls bark method from Dog class
+
+my_cat.speak()   # Calls speak method from Animal class
+my_cat.meow()    # Calls meow method from Cat class
+
+
+
+
+# Hybrid Inheritance
+class Vehicle:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def display_info(self):
+        print(f"{self.brand} {self.model}")
+
+
+class Car(Vehicle):
+    def drive(self):
+        print("Car is driving")
+
+class Motorcycle(Vehicle):
+    def ride(self):
+        print("Motorcycle is riding")
+
+class HybridVehicle(Car, Motorcycle):
+    def honk(self):
+        print("Honk honk!")
+
+hybrid_vehicle_instance = HybridVehicle("Toyota", "Prius")
+
+
+hybrid_vehicle_instance.display_info()   # Calls display_info method from Vehicle class
+hybrid_vehicle_instance.drive()          # Calls drive method from Car class
+hybrid_vehicle_instance.ride()           # Calls ride method from Motorcycle class
+hybrid_vehicle_instance.honk()           # Calls honk method from HybridVehicle class
+
+
+
+
+
+# Python Polymorphism 
+class Car:
+    def move(self):
+        print("Drive!")
+
+class Boat:
+    def move(self):
+        print("Sail!")
+
+car = Car()
+boat = Boat()
+
+car.move()
+boat.move()
+
 
 
 
 # Python Encapsulation
-class BankAccount:
-    def __init__(self, balance):
-        self._balance = balance  # Private attribute
+class Car:
+    def __init__(self, make, model):
+        self.__make = make  # Private attribute
+        self._model = model  # Protected attribute
 
-    def deposit(self, amount):
-        self._balance += amount
+    def get_make(self):
+        return self.__make
 
-    def withdraw(self, amount):
-        if self._balance >= amount:
-            self._balance -= amount
-        else:
-            print("Insufficient funds")
+    def set_make(self, make):
+        self.__make = make
 
-    def get_balance(self):
-        return self._balance
 
-account = BankAccount(1000)
-account.deposit(500)
-account.withdraw(200)
-print("Balance:", account.get_balance())
+    def get_model(self):
+        return self._model
+
+    def set_model(self, model):
+        self._model = model
+
+my_car = Car("Toyota", "Camry")
+
+print("Make:", my_car.get_make())
+print("Model:", my_car.get_model())
+
+my_car.set_make("Honda")
+my_car.set_model("Accord")
+
+print("Updated Make:", my_car.get_make())
+print("Updated Model:", my_car.get_model())
+
 
