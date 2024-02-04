@@ -1,26 +1,35 @@
 # Python Abstraction
-class Computer:
-    def __init__(self):
-        self.cpu = "Intel Core i5"
-        self.memory = "16GB"
-        self.storage = "512GB SSD"
+from abc import ABC, abstractmethod    # ABC (Abstract Base Class)
 
-    def turn_on(self):
-        print("Computer is turning on...")
-        # Perform internal hardware initialization
+# Define an abstract class with abstract method(s)
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
 
-    def turn_off(self):
-        print("Computer is turning off...")
-        # Perform internal hardware shutdown
+    @abstractmethod
+    def perimeter(self):
+        pass
 
-    def run_program(self, program):
-        print("Executing program:", program)
-        # Perform program execution using internal hardware
+# Create a concrete class that inherits from the abstract class
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
 
-computer = Computer()
-computer.turn_on()
-computer.run_program("Web browser")
-computer.turn_off()
+    # Implement the abstract methods
+    def area(self):
+        return 3.14 * self.radius * self.radius
+
+    def perimeter(self):
+        return 2 * 3.14 * self.radius
+
+# Create an instance of the concrete class
+circle = Circle(radius=5)
+
+# Call the methods on the instance
+print("Area:", circle.area())  # Output: 78.5
+print("Perimeter:", circle.perimeter())  # Output: 31.4
+
 
 
 
