@@ -54,7 +54,7 @@ person1 = Demo('Shiva', 23, 'BBSR')
 print(person1) # Output : <__main__.Demo object at 0x0000015EE46A8350>'''
 
 
-# string representation of an object WITH the __str__() function
+# String representation of an object with the __str__() function
 '''class Demo:
     def __init__(self, name, age, city):
         self.name = name
