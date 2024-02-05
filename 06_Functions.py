@@ -46,13 +46,14 @@ def my_function2(name1,name2,name3):
     print("Name was -> ",name3)
 my_function2(name1="sumit",name2="sonu",name3='shiva')
 
+
+
 # Arbitrary Keyword Arguments -> **kwargs
 '''If you do not know how many keyword arguments that will be passed into your function, add two asterisk: ** before the parameter name in the function definition. If the number of keyword arguments is unknown, add a double ** before the parameter name:'''
 def my_function(**name):
   print("My last name is " + name["lname"])
 
 my_function(fname = "Laxmi", lname = "Narayana")
-
 
 
 
