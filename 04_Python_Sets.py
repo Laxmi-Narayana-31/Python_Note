@@ -7,66 +7,71 @@
 #print(thisset)
 
 # Set is also created by suing set() constructor
-'''myset = set((1,2,3,4,5,6))
-print(type(myset))'''
+myset = set((1,2,3,4,5,6))
+print(type(myset))
 
 # Set are not index based
 # You cannot access elements of a set using an index like list or tuple
+# Once a set is created, you cannot change its items, but you can add new items
 
-'''Once a set is created, you cannot change its items, but you can add new items.'''
-
-'''Prgra_Lang = {'Java','C','JavaScript','C#','C++'}
+Prgra_Lang = {'Java','C','JavaScript','C#','C++'}
 Prgra_Lang.add('Python')
-print(Prgra_Lang)'''
+print(Prgra_Lang)
+
+x = Prgra_Lang.copy() # Returns a copy of the set
+print(x)
 
 # update() -> To add items from another set into the current set
-'''name = {'shiva','amit','sonu','sumit'} 
+name = {'shiva','amit','sonu','sumit'} 
 name1 = {'LaxmiNarayana', 'Ram','Krishna'}
 name.update(name1)
-print(name)'''
+print(name)
+
 
 # update() method does not have to be a set, it can be any iterable object (tuples, lists, dictionaries etc.)
-'''name = {'shiva','amit','sonu','sumit'} 
+name = {'shiva','amit','sonu','sumit'} 
 name1 = ['LaxmiNarayana', 'Ram','Krishna']
 name.update(name1)
 print(name)
-'''
+
 
 #remove() or discard() -> to remove item from set. If the item to remove does not exist, remove() will raise an KeyError.But discard() will not raise any error
-'''name2 = {'a','b','c','d','e'}
+name2 = {'a','b','c','d','e'}
 name2.remove('c')
-print(name2)'''
+print(name2)
+
 
 # pop() -> Remove a random item from the set
-'''name3 = {'shiva','amit','sonu','sumit'} 
+name3 = {'shiva','amit','sonu','sumit'} 
 item = name3.pop()
 print(item)
-print(name3)'''
+print(name3)
+
 
 # clear() -> remove all element from a set
-'''name3.clear()
-print(name3)  # Output: set()'''
+name3.clear()
+print(name3)  # Output: set()
 
 # Iterate a set 
-'''city = {'BBSR','Delhi','Hyderbad','Mumbai','Banglore'}
+city = {'BBSR','Delhi','Hyderbad','Mumbai','Banglore'}
 for citynames in city:
-    print(citynames)'''
+    print(citynames)
 
 
 # Join sets
-'''set1 = {1,2,3}
+set1 = {1,2,3}
 set2 = {3,4,5}
 set3 = set1.union(set2)   # Union operation returns a new set with unique elements from both sets
-print(set3)  # Output: {1, 2, 3, 4, 5}'''
+print(set3)  # Output: {1, 2, 3, 4, 5}
 
 
 # Update set
-'''set1.update({6,7})
-print(set1)  # Output: {1, 2, 3, 6, 7}'''
+set1.update({6,7})
+print(set1)  # Output: {1, 2, 3, 6, 7}
 
 
 # Intersection of two sets
-'''set1 = {1,2,3,4,5}
+set1 = {1,2,3,4,5}
 set2 = {4,5,6,7,8}
 set3 = set1.intersection(set2)  # Returns a new set that contains common items between two or more sets
 print(set3)  # Output: {4, 5}
@@ -76,27 +81,27 @@ print(set3)  # Output: {4, 5}
 set1 = {1,2,3,4,5}
 set2 = {4,5,6,7,8}
 set3 = set1.difference(set2)  # Returns a new set that contains items that are only in first set and not present
-print(set3)  # Output: {1, 2, 3}'''
+print(set3)  # Output: {1, 2, 3}
 
 
 # symmetric_difference : This method will keep only the elements that are NOT present in both sets.
-'''set1 = {1,2,3,4,5}
+set1 = {1,2,3,4,5}
 set2 = {4,5,6,7,8}
 set3 = set1.symmetric_difference(set2)
 print(set3)  # Output: {1, 2, 3, 6, 7, 8}
 
 set4 = set1.symmetric_difference_update(set2)
-print(set4)  # Output: {}'''
+print(set4)  # Output: {}
 
 
 # Note: The values True and 1 are considered the same value in sets, and are treated as duplicates
-'''set1 = {'A','B','ABC',True}
+set1 = {'A','B','ABC',True}
 set2 = {'B','C','Hello',1}
 set3 = set1.symmetric_difference(set2)
 print(set3)
 
 # isdisjoint -> True if no common item and returns false if common item are there 
-print(set1.isdisjoint(set2)) ''' 
+print(set1.isdisjoint(set2)) 
 
 
 # Checking subset and superset
