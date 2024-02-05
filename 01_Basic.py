@@ -245,7 +245,7 @@ x = bool(5)"""
 
 
 # String -> Enclosed with single or double quotes
-"""a = "Hello, World!"
+a = "Hello, World!"
 print(a[0])
 print(a[1])
 print(a[2])
@@ -253,10 +253,10 @@ print(a[3])
 print(a[4])
 print(a[5])
 print(a[6])
-print(a[7])"""
+print(a[7])
 
 
-'''  
+ 
 str = 'Hello World'
 for x in str:  # Iterate using loop
   print(x)
@@ -278,7 +278,7 @@ print("War" not in str) # Return Boolean value '''
 
 
 # Slicing -> It retuns the range of characters by using this 
-'''
+
 str1 = "Hello, World!"
 print(len(str1))
 print(str1[2:5]) # [2:5] index 2 included but index 5 is not included
@@ -289,22 +289,22 @@ print(str1[:5]) # Nothing in strt position means it starts from index 0 position
 
 print(str1[8:]) # From index 8 till end (not include 9th index)
 
-print(str1[-5:-2]) # str1[len(str1)-5 : len(str1)-2] = 13-5 : 13-2 = 8:11  '''
+print(str1[-5:-2]) # str1[len(str1)-5 : len(str1)-2] = 13-5 : 13-2 = 8:11  
 
 
 # String Modification
 
-"""str2 = "     Hello, World!  "
+str2 = "     Hello, World!  "
 print(str2.upper())
 print(str2.lower())
 print(str2.replace('World', 'Python')) # World is replaced with Python
 print(str2.strip()) # strip() removes all white spaces at beginning and end positions
-print(str2.split('e'))"""
+print(str2.split('e'))
 
 
 # Concatenation
 str1 = "Laxmi"
-"""str2 = "Narayana"
+str2 = "Narayana"
 str2 = "Pattanayak"
 name = str1 + str2 + str2
 print(name)
@@ -324,7 +324,7 @@ full_sentence = "My name is "+name+ "and my age is "+ str(age) # If you add just
 print(full_sentence )
 
 txt2 = "I am Shiva \"Hello\" from India"
-print(txt2)"""
+print(txt2)
 
 
 
@@ -549,6 +549,4 @@ is  is not -----> Identity operator
 in  not in -----> Membership operators
 not	----->  Logical NOT	
 and	----->  Logical AND	
-or  -----> 	Logical OR"""
-
-
+or  -----> 	Logical OR   """
