@@ -1,4 +1,3 @@
-'''
 my_tuple = ('A','B','C','D','E','A','B')
 print(my_tuple)
 
@@ -32,11 +31,11 @@ new_tuple = ('a','b','c','d','e','f')
 if('b' in new_tuple):
     print("Yes b exists in the tuple")
 else:
-    print("No b does not exist in the tuple")   '''
+    print("No b does not exist in the tuple")   
 
 
 # Update the tuples -> if cant directly change tuples becaus eof immutability. if you want to change tuple are converted to lists then change the value again list is converted to tuples
-'''
+
 x = ('A','B','C','D')
 y = list(x)
 y[1] = "Hello"
@@ -45,8 +44,8 @@ print(x)
 
 
 # Add items
-1. Using append
-2. Add two tuples 
+# 1. Using append
+# 2. Add two tuples 
 # 1. Using append
 demo_tuple = ('shiva','sonu','sumit','amit')
 tuple_to_list = list(demo_tuple) # Type casting -> Tuple to List
@@ -65,7 +64,7 @@ tuple1 = ('a','b','c','d','e')
 tuple2 = ('hello','world')
 new_tuple = tuple1 + tuple2
 print(new_tuple)
-'''
+
 # similarly you can delete any item from list using first method
 
 
@@ -79,33 +78,33 @@ print(new_tuple)
 
 # Unpacking a tuple:
 
-'''fruits = ("apple", "banana", "cherry")
+fruits = ("apple", "banana", "cherry")
 
 (shiva, sonu, amit) = fruits
 
 print(shiva)
 print(sonu)
-print(amit)'''
+print(amit)
 
 
 # Nested Tuples
-'''nested_tuples = (("Apple","Banana"),("Cherry","Durian"))
+nested_tuples = (("Apple","Banana"),("Cherry","Durian"))
 for tup in nested_tuples:
     print(tup[0])
     print(tup[1])
     # Accessing elements of nested tuples
     print(tup[0][0],tup[0][1])
-    print(tup[1][0],tup[1][1])'''
+    print(tup[1][0],tup[1][1])
 
 
 # Iterate a Tuple
-'''my_tuple = (1,2,3,4,5)
+my_tuple = (1,2,3,4,5)
 print(len(my_tuple))
 for i in my_tuple:
     print(i)
 
 for j in range(len(my_tuple)):
-    print(j)'''
+    print(j)
 
 
 
@@ -121,3 +120,15 @@ print(new_Tuple.index('sumit'))
 # Nesting Tuples
 nested_tuple = ((1, 2), (3, 4), (5, 6))
 print(nested_tuple[1][0])  # Output: 3 (accessing the first element of the second inner tuple)
+
+
+# Tuple Method
+# count(): Returns the number of occurrences of the specified element
+my_tuple = (1, 2, 3, 1, 4, 1, 5)
+count_of_1 = my_tuple.count(1)
+print(count_of_1)  # Output: 3
+
+# index(): Returns the index of the first occurrence of the specified element 
+my_tuple = (10, 20, 30, 20, 40)
+index_of_20 = my_tuple.index(20)
+print(index_of_20)  # Output: 1
