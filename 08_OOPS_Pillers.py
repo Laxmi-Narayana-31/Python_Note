@@ -224,5 +224,3 @@ my_car.set_model("Accord")
 
 print("Updated Make:", my_car.get_make())
 print("Updated Model:", my_car.get_model())
-
-
