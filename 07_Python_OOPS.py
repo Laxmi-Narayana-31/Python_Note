@@ -233,6 +233,3 @@ plane1 = Plane("Boeing", "747")     #Create a Plane class
 
 for x in (car1, boat1, plane1):
   x.move()
-
-
-  
