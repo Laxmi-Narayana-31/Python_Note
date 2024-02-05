@@ -152,11 +152,3 @@ print(my_list)   # Output: [1, 2, 5, 8, 9]
 my_list = [5, 2, 8, 1, 9] 
 my_list.sort(reverse=True) 
 print(my_list)   # Output: [9, 8, 5, 2, 1]
-
-
-
-
-
-
-
-
