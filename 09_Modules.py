@@ -11,29 +11,27 @@ import MyInfo
 a = MyInfo.person1['age']
 print(a)'''
 
-# import platform
-# x = platform.system()
-# print(x)
+import platform
+x = platform.system()
+print(x)
 
 
-# import platform
-# x = dir(platform)
-# print(x)
+import platform
+x = dir(platform)
+print(x)
 
 
 # Python Dates -> A date in Python is not a data type of its own, but we can import a module named datetime to work with dates as date objects.
 
+import datetime
+x = datetime.datetime.now()
+print("Current date and time: ", x)
+print(x.year)
+print(x.strftime("%A"))
+print(x.strftime("%B"))
 
-
-# import datetime
-# x = datetime.datetime.now()
-# print("Current date and time: ", x)
-# print(x.year)
-# print(x.strftime("%A"))
-# print(x.strftime("%B"))
-
-# y = datetime.datetime(2023,11,19) # YY/MM/DD
-# print(y)
+y = datetime.datetime(2023,11,19) # YY/MM/DD
+print(y)
 
 
 
@@ -79,7 +77,6 @@ y = json.dumps(x)
 
 # the result is a JSON string:
 print(y)
-
 
 
 
