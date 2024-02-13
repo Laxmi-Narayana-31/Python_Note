@@ -8,7 +8,6 @@ try:
 except [Exception type]:
     //code segment to be executed if there is an exception in the code above'''
     
-
 try:
     x = 10 / 2
     print(x)
@@ -50,8 +49,6 @@ finally:
 
 
 # You can manually throw or raise an exception by using the "raise" keyword.
-
-
 a = -10
 if a < 0:
     raise Exception("The no is negative number")
